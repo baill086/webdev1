@@ -23,7 +23,29 @@
     online for "full screen leaflet map" or something to that effect.
     -->
     <style>
-        #map { height:100%; }
+            /* Makes the leaflet map full screen. I found this code from d3noob http://bl.ocks.org/d3noob/7654694*/
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+        }
+        
+        
+        /*styles for my header*/
+        #header {
+            height 60px;
+            /*    Text Color and background color*/
+            color: darkblue;
+            background-color:beige;
+            text-align: center;
+        /*Changed Margin to remove whitespace*/
+            margin-left: -10px;
+            margin-right: -10px;
+            margin-top: -20px;
+        }
     </style>
 </head>
 
@@ -40,6 +62,15 @@
         - Course information (course name, your name, etc.)
         - A link to https://leafletjs.com using the text: "I built this with Leaflet"
     -->
+    <!-- The header for my web map   -->
+    <div id = "header">
+        <!--The Title for my map-->
+        <h2>My First Leaflet Map</h2>
+        <!-- My class information-->
+        <h4> GIS 4533 | Reed Baillargeon | Fall 2018</h4>
+                        <!--   added a link     -->
+        <a href= "https://leafletjs.com">I built this with Leaflet</a>
+    </div>
 
     <!-- the container for our map -->
     <div id="map"></div>
